@@ -7,7 +7,11 @@ export default function Experiences() {
   useEffect(() => {
     fetch("https://fahim-backend.vercel.app/portfolio/api/experiences")
       .then((res) => res.json())
-      .then((data) => setExperiences(data));
+      .then((data) =>
+        setExperiences(
+          data.filter((slData) => slData.showInExperiencePage === true)
+        )
+      );
   }, []);
 
   return (
