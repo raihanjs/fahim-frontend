@@ -25,7 +25,7 @@ export default function Header() {
       <div className="container">
         <div className="flex justify-between items-center">
           {/* Brand start */}
-          <div className="w-2/12">
+          <div className="w-5/12 md:w-2/12">
             <Swiper
               slidesPerView={1}
               autoplay={{
