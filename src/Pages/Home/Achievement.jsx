@@ -13,7 +13,7 @@ export default function Achievemnet() {
       <div className="container">
         <div data-aos="fade-up">
           <h3 className="text-3xl font-bold mb-5">Achievements</h3>
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid md:grid-cols-3 gap-5">
             {achievements.map((achievement) => (
               <div key={achievement._id}>
                 <div className="h-80 overflow-hidden">

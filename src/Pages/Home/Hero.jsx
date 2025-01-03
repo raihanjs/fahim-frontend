@@ -10,19 +10,19 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[95vh] overflow-hidden">
+    <section className="py-20 sm:py-0 bg-[#000] relative h-[44vh] md:h-[40vh] lg:h-[60vh] xl:h-[95vh] overflow-hidden">
       {/* Text Area Start */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4 z-40 w-[80%]">
+      <div className="absolute top-14 md:top-16 lg:top-32 xl:top-60 left-2 lg:left-28 xl:left-44 z-40 w-[98%] lg:w-[80%]">
         <h1
           data-aos="fade-up"
-          className="text-4xl font-bold text-orange-600 mb-5"
+          className="text-xl md:text-2xl lg:text-4xl font-bold text-orange-600 mb-1 lg:mb-5"
         >
           {homeAbout[0]?.mainTitle}
         </h1>
 
         {homeAbout[0]?.texts.map((text, i) => (
           <p
-            className="text-white text-2xl mb-5"
+            className="text-white text-justify text-sm md:text-lg lg:text-xl xl:text-2xl mb-0.5 lg:mb-5"
             data-aos="fade-up"
             data-aos-delay="100"
             key={i}

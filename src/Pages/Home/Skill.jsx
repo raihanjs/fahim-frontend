@@ -10,7 +10,7 @@ export default function Skill() {
   }, []);
 
   return (
-    <section className="py-12">
+    <section className="py-5  md:py-5 lg:py-12">
       <div className="container">
         {/* Section Titile Start */}
         <div className="" data-aos="fade-up">
@@ -19,7 +19,7 @@ export default function Skill() {
         {/* Section Titile End */}
 
         {/* Skills Container Start */}
-        <div className="grid grid-cols-3 gap-y-5 gap-x-12">
+        <div className="grid cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-5 gap-x-12">
           {skills.map((skill) => (
             <div key={skill._id}>
               {/* Skill Item Content */}

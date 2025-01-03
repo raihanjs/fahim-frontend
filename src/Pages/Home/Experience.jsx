@@ -11,10 +11,12 @@ export default function Experience() {
       );
   }, []);
   return (
-    <section className="py-12">
+    <section className="py-5  md:py-5 lg:py-12">
       <div className="container">
         <div className="" data-aos="fade-up">
-          <h3 className="text-3xl font-bold mb-5">Experiences</h3>
+          <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-5">
+            Experiences
+          </h3>
 
           {experiences.map((experience) => (
             <div
@@ -23,10 +25,10 @@ export default function Experience() {
               data-aos="fade-left"
             >
               <div className="absolute top-0 -left-2.5 h-4 w-4 rounded-full bg-orange-600"></div>
-              <h4 className="text-xl font-bold text-slate-600">
+              <h4 className="text-md md:text-lg lg:text-xl font-bold text-slate-600">
                 {experience.designation} | {experience.duration}
               </h4>
-              <h5 className="text-2xl">
+              <h5 className="text-lg md:text-xl lg:text-2xl">
                 <strong>
                   {experience.company} | {experience.location}
                 </strong>
@@ -34,7 +36,7 @@ export default function Experience() {
               <ul>
                 {experience.responsibilities.map((response, index) => (
                   <li
-                    className="ml-5 my-1.5 text-lg"
+                    className="ml-5 my-1.5 md:text-lg"
                     style={{ listStyleType: "square" }}
                     key={index}
                   >

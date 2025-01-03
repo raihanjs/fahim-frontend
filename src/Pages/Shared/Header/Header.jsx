@@ -37,7 +37,7 @@ export default function Header() {
               {titles.map((title) => (
                 <>
                   <SwiperSlide>
-                    <h2 className="font-bold text-2xl md:text-4xl">
+                    <h2 className="font-bold text-xl lg:text-2xl xl:text-4xl">
                       <Link to="" className="cursor-pointer">
                         {title.title}
                       </Link>
@@ -51,23 +51,23 @@ export default function Header() {
 
           {/* Desktop menu  start */}
           <div className="hidden md:block">
-            <ul className=" flex gap-5 ">
-              <li className="font-bold text-lg hover:text-orange-600 hover:scale-125">
+            <ul className=" flex md:gap-2 lg:gap-5 ">
+              <li className="font-bold text-md lg:text-lg hover:text-orange-600 hover:scale-125">
                 <Link to="experiences">EXPERIENCES</Link>
               </li>
-              <li className="font-bold text-lg hover:text-orange-600 hover:scale-125">
+              <li className="font-bold text-md lg:text-lg hover:text-orange-600 hover:scale-125">
                 <Link to="about">ABOUT</Link>
               </li>
-              <li className="font-bold text-lg hover:text-orange-600 hover:scale-125">
+              <li className="font-bold text-md lg:text-lg hover:text-orange-600 hover:scale-125">
                 <Link to="leadership">LEADERSHIP</Link>
               </li>
-              <li className="font-bold text-lg hover:text-orange-600 hover:scale-125">
+              <li className="font-bold text-md lg:text-lg hover:text-orange-600 hover:scale-125">
                 <Link to="projects">PROJECTS</Link>
               </li>
-              <li className="font-bold text-lg hover:text-orange-600 hover:scale-125">
+              <li className="font-bold text-md lg:text-lg hover:text-orange-600 hover:scale-125">
                 <Link to="certificates">CERTIFICATIONS</Link>
               </li>
-              <li className="font-bold text-lg hover:text-orange-600 hover:scale-125">
+              <li className="font-bold text-md lg:text-lg hover:text-orange-600 hover:scale-125">
                 <Link to="contact">CONTACT</Link>
               </li>
             </ul>
@@ -88,22 +88,34 @@ export default function Header() {
           <div className="w-full bg-black text-white block md:hidden">
             <ul className="my-5">
               <li className="font-bold text-lg hover:text-orange-600 hover:pl-3">
-                <Link to="experiences">EXPERIENCES</Link>
+                <Link onClick={() => setIsOpen(!isOpen)} to="experiences">
+                  EXPERIENCES
+                </Link>
               </li>
               <li className="font-bold text-lg hover:text-orange-600 hover:pl-3">
-                <Link to="about">ABOUT</Link>
+                <Link onClick={() => setIsOpen(!isOpen)} to="about">
+                  ABOUT
+                </Link>
               </li>
               <li className="font-bold text-lg hover:text-orange-600 hover:pl-3">
-                <Link to="leadership">LEADERSHIP</Link>
+                <Link onClick={() => setIsOpen(!isOpen)} to="leadership">
+                  LEADERSHIP
+                </Link>
               </li>
               <li className="font-bold text-lg hover:text-orange-600 hover:pl-3">
-                <Link to="projects">PROJECTS</Link>
+                <Link onClick={() => setIsOpen(!isOpen)} to="projects">
+                  PROJECTS
+                </Link>
               </li>
               <li className="font-bold text-lg hover:text-orange-600 hover:pl-3">
-                <Link to="certificates">CERTIFICATIONS</Link>
+                <Link onClick={() => setIsOpen(!isOpen)} to="certificates">
+                  CERTIFICATIONS
+                </Link>
               </li>
               <li className="font-bold text-lg hover:text-orange-600 hover:pl-3">
-                <Link to="contact">CONTACT</Link>
+                <Link onClick={() => setIsOpen(!isOpen)} to="contact">
+                  CONTACT
+                </Link>
               </li>
             </ul>
           </div>

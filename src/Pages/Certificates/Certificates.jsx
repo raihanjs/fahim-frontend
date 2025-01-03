@@ -35,9 +35,17 @@ export default function Certificates() {
               onClick={() => handleCertificateClick(certificate)}
               data-aos="zoom-in"
             >
-              <img src={certificate?.image} className="" alt="" />
-              <p className="text-2xl font-bold truncate">{certificate?.name}</p>
-              <p className="text-2xl font-bold">{certificate?.year}</p>
+              <img
+                src={certificate?.image}
+                style={{ maxWidth: "95%" }}
+                alt=""
+              />
+              <p className="text-lg md:text-xl lg:text-2xl font-bold truncate">
+                {certificate?.name}
+              </p>
+              <p className="text-lg md:text-xl lg:text-2xl font-bold">
+                {certificate?.year}
+              </p>
             </div>
           ))}
         </div>
