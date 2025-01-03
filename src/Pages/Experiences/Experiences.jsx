@@ -27,7 +27,7 @@ export default function Experiences() {
 
         {/* Experience Container Start */}
         <div className="my-10">
-          <div className="flex flex-wrap justify-center md:justify-between gap-5">
+          <div className="flex flex-wrap md:justify-between gap-5">
             {experiences.map((experience, index) => (
               <div
                 key={experience._id}
