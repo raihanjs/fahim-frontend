@@ -1,7 +1,9 @@
+import { use } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 
 export default function ExperienceDetails() {
   const experienceDetails = useLoaderData();
+  console.log(experienceDetails);
 
   return (
     <section className="py-12 mt-2">

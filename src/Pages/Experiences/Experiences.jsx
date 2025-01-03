@@ -27,13 +27,13 @@ export default function Experiences() {
 
         {/* Experience Container Start */}
         <div className="my-10">
-          <div className="flex flex-wrap md:justify-between gap-5">
+          <div className="flex flex-wrap justify-center gap-5">
             {experiences.map((experience, index) => (
               <div
                 key={experience._id}
                 className="w-80 border rounded-md p-2"
                 data-aos="fade-left"
-                ata-aos-delay={`${index * 100}`}
+                data-aos-delay={`${index * 100}`}
               >
                 <Link to={`/experiencedetails/${experience._id}`}>
                   <img src={experience.companyLogo} alt="" />

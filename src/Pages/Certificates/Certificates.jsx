@@ -33,6 +33,7 @@ export default function Certificates() {
               key={certificate._id}
               className="w-3/12 p-8 cursor-pointer"
               onClick={() => handleCertificateClick(certificate)}
+              data-aos="zoom-in"
             >
               <img src={certificate?.image} className="" alt="" />
               <p className="text-2xl font-bold truncate">{certificate?.name}</p>

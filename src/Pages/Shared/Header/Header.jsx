@@ -1,20 +1,51 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const [titles, setTitles] = useState([]);
+  useEffect(() => {
+    fetch("https://fahim-backend.vercel.app/portfolio/api/titles")
+      .then((res) => res.json())
+      .then((data) => setTitles(data));
+  }, []);
 
   return (
     <header className="bg-black text-white fixed top-0 left-0 z-50 w-full py-2">
       <div className="container">
         <div className="flex justify-between items-center">
           {/* Brand start */}
-          <div>
-            <h2 className="font-bold text-4xl">
-              <Link to="">QFAHIM</Link>
-            </h2>
+          <div className="w-2/12">
+            <Swiper
+              slidesPerView={1}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay]}
+            >
+              {titles.map((title) => (
+                <>
+                  <SwiperSlide>
+                    <h2 className="font-bold text-4xl">
+                      <Link to="" className="cursor-pointer">
+                        {title.title}
+                      </Link>
+                    </h2>
+                  </SwiperSlide>
+                </>
+              ))}
+            </Swiper>
           </div>
           {/* Brand End */}
 
