@@ -7,7 +7,7 @@ export default function About() {
   const [aboutDetails, setAboutDetails] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/portfolio/api/about")
+    fetch("https://fahim-backend.vercel.app/portfolio/api/about")
       .then((res) => res.json())
       .then((data) => setAboutDetails(data));
   }, []);

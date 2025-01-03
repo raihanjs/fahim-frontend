@@ -4,7 +4,7 @@ export default function Hero() {
   const [homeAbout, setHomeABout] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/portfolio/api/homeabout")
+    fetch("https://fahim-backend.vercel.app/portfolio/api/homeabout")
       .then((res) => res.json())
       .then((data) => setHomeABout(data));
   }, []);

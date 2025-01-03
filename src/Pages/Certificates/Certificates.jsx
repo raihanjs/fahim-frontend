@@ -7,7 +7,7 @@ export default function Certificates() {
   const [certificates, setCertificates] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/portfolio/api/certificates")
+    fetch("https://fahim-backend.vercel.app/portfolio/api/certificates")
       .then((res) => res.json())
       .then((data) => setCertificates(data));
   }, []);

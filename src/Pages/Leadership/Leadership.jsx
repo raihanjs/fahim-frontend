@@ -5,7 +5,7 @@ export default function Leadership() {
   const [leaderships, setLeaderships] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/portfolio/api/leaderships")
+    fetch("https://fahim-backend.vercel.app/portfolio/api/leaderships")
       .then((res) => res.json())
       .then((data) => setLeaderships(data));
   }, []);

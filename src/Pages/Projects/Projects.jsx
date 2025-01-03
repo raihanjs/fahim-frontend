@@ -5,7 +5,7 @@ export default function Projects() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/portfolio/api/projects")
+    fetch("https://fahim-backend.vercel.app/portfolio/api/projects")
       .then((res) => res.json())
       .then((data) => setProjects(data));
   }, []);

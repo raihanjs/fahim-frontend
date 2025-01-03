@@ -4,7 +4,7 @@ export default function Experience() {
   const [experiences, setExperiences] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/portfolio/api/experiences")
+    fetch("https://fahim-backend.vercel.app/portfolio/api/experiences")
       .then((res) => res.json())
       .then((data) =>
         setExperiences(

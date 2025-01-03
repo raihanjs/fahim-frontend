@@ -27,7 +27,9 @@ export const Router = createBrowserRouter([
       {
         path: "experiencedetails/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/portfolio/api/experiences/${params.id}`),
+          fetch(
+            `https://fahim-backend.vercel.app/portfolio/api/experiences/${params.id}`
+          ),
         element: <ExperienceDetails />,
       },
       {
@@ -41,7 +43,9 @@ export const Router = createBrowserRouter([
       {
         path: "leadershipdetails/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/portfolio/api/leaderships/${params.id}`),
+          fetch(
+            `https://fahim-backend.vercel.app/portfolio/api/leaderships/${params.id}`
+          ),
         element: <LeadershipDetails />,
       },
       {
@@ -51,7 +55,9 @@ export const Router = createBrowserRouter([
       {
         path: "projectdetails/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/portfolio/api/projects/${params.id}`),
+          fetch(
+            `https://fahim-backend.vercel.app/portfolio/api/projects/${params.id}`
+          ),
         element: <ProjectDetails />,
       },
       {

@@ -4,7 +4,7 @@ export default function Skill() {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/portfolio/api/skills")
+    fetch("https://fahim-backend.vercel.app/portfolio/api/skills")
       .then((res) => res.json())
       .then((data) => setSkills(data));
   }, []);

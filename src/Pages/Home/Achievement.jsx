@@ -4,7 +4,7 @@ export default function Achievemnet() {
   const [achievements, setAchievements] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/portfolio/api/achievments")
+    fetch("https://fahim-backend.vercel.app/portfolio/api/achievments")
       .then((res) => res.json())
       .then((data) => setAchievements(data));
   }, []);
