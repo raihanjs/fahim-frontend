@@ -31,7 +31,7 @@ export default function Certificates() {
           {certificates.map((certificate) => (
             <div
               key={certificate._id}
-              className="w-3/12 p-8 cursor-pointer"
+              className="md:2/12 lg:w-4/12 p-8 cursor-pointer"
               onClick={() => handleCertificateClick(certificate)}
               data-aos="zoom-in"
             >

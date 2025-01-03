@@ -37,7 +37,7 @@ export default function Header() {
               {titles.map((title) => (
                 <>
                   <SwiperSlide>
-                    <h2 className="font-bold text-4xl">
+                    <h2 className="font-bold text-2xl md:text-4xl">
                       <Link to="" className="cursor-pointer">
                         {title.title}
                       </Link>
